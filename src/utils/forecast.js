@@ -9,7 +9,8 @@ const forecast = (longitude, latitude, callback) => {
       callback("cannot find location", undefined);
     } else {
       const forecastString =
-        "It is currently " +
+        "Observation time " + response.body.current.observation_time +
+        ": It is currently " +
         response.body.current.temperature +
         " degree out. There is a " +
         response.body.current.precip +
